@@ -1,0 +1,35 @@
+#Atags{
+    color: black;
+    text-decoration: none;
+}
+
+#tr11,#tr41{
+    scrollbar-width: 300px;
+    float: left;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+#tr11::-webkit-scrollbar,#tr41::-webkit-scrollbar {
+    display: none;
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+#img11{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    /* margin: 10px; */
+   
+   
+}
+
+#img31{
+    height: 40px;
+    width: 300px;
+}
+
+#page-invissible{
+    visibility:hidden;
+}
