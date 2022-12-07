@@ -72,17 +72,17 @@
     </tr>
     <!-- stating line wise images for different styles  -->
     <tr id="tr11" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <td><img src="virat.jpg" alt=".." class="img11" id="11"><strong>MEN</strong></td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Women</td>
+      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\men.jpeg" alt=".." class="img11" id="11" onclick="run11()"><strong id="imgname11">MEN</strong></td>
+      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womem.jpg" alt=".." class="img11" id="11">Women</td>
       <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">WinterWear</td>
       <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">kids</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Beauty</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Sports</td>
+      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\men2.jpeg" alt=".." class="img11" id="11">Beauty</td>
+      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\women2.jpeg" alt=".." class="img11" id="11">Sports</td>
       <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Footwear</td>
-      <td><img src="virat.jpg" alt=".." class="img11" id="11">Home</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Fragrense</td>
+      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Home</td>
+      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womem.jpg" alt=".." class="img11" id="11">Fragrense</td>
       <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Belts</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Frames</td>
+      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\men2.webp" alt=".." class="img11" id="11">Frames</td>
       <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Accesssories</td>
       <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Jewellery</td>
       <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11"><strong>Stylecast</strong></td>
@@ -97,10 +97,19 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="myntra1.jpg" class="d-block w-100" style="height:400px;" alt="...">
+              <video controls autoplay style="max-width: 100%;" >
+                <source src="C:\Users\Doddi Naveen\Pictures\myntraimgs\video.mp4" type="video/mp4">
+              </video>
+              </video>
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\myntra1.jpg" class="d-block w-100" style="height:400px;" alt="...">
               <div class="carousel-caption">
               </div>
             </div>
@@ -202,7 +211,7 @@
       <td>
         <a  id="a117" class="Atags" onclick="run117()">
           <div class="card" style="width: 150px; text-align: left;">
-            <img class="card-img-top" src="myntra-credit-card2.webp" alt="Card image cap" id="117">
+            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\myntra-credit-card2.webp" alt="Card image cap" id="117">
             <div class="card-body">
               <h5 class="card-title" id="imgname117">FOREVER 21</h5>
               <small class="text-muted">Caps</small>
@@ -213,19 +222,28 @@
       </td>
     </tr>
   </table>
-  <div style="visibility: hidden; position: absolute; left: 300px; top: 300px; background-color: whitesmoke;" id="imgviewer">
+  <!-- div for to see the image -->
+  <div style="visibility: hidden; position: fixed; left: 300px; top: 300px; background-color: rgb(143, 173, 199);" id="imgviewer">
     <div>
       <button type="button" onclick="closeimg()">&times;</button>
       <h4 id="imgname">..</h4>
     </div>
     <div>
-      <img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt="Logo" id="imageviewer">
+      <img src=" " alt="Logo" id="imageviewer">
     </div>
     <div>
-      <button type="button" class="btn btn-default" >WHISHLIST</button>
-      <button type="button" class="btn btn-default" >ADD TO CART</button>
+      <!-- <button type="button" class="btn btn-default" >WHISHLIST</button> -->
+      <button id="wishlistbtn" class="btn bi bi-heart" style="border-radius: 30px; background:white;" onclick="wishlist()">&#9825 wishlist</button>
+      <button type="button" class="btn btn-default" onclick="addCart()">ADD TO CART</button>
       <button type="button" class="btn btn-default" >VIEW SIMILAR</button>
     </div>
+  </div>
+  <!-- div to add the items to CART -->
+  <div style="height: 800px; width: 300px; border: 2px solid; visibility: hidden; position: fixed; right: 0px; top: 0px;" id="cartDiv">
+
+    <image src=" " id="cartimg">
+    
+
   </div>
 </body>
 </html>
