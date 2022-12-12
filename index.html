@@ -8,402 +8,450 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="myntraLogo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myntra</title>
 </head>
-<body>
-  <table class="table" id="mainTable">
-    <tr>
-      <td>
-        <nav class="navbar navbar-dark bg-light fixed-top w-100 col-xs-2 col-sm-3 col-md-6 col-lg-12">
-          <div class="container-fluid">
-            <a class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" id="Atags">☰</a>
-            <!-- 3 dots button and declaration-->
-            <div class="offcanvas offcanvas-start text-bg-light" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Login</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<body class="table-responsive" onload="forresolution()" onclick="forresolution()" onresize="forresolution()">
+  <div>
+    <table class="table" id="mainTable">
+      <tr>
+        <td>
+          <nav class="navbar navbar-dark bg-light fixed-top w-100">
+            <div class="container-fluid">
+              <a class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" id="Atags">☰</a>
+              <!-- 3 dots button and declaration-->
+              <div class="offcanvas offcanvas-start text-bg-light" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>Login</h5>
+                  <button type="button" data-bs-dismiss="offcanvas">&#10008;</button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-left flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" id="Atags">Shop by Catrgories</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="Atags">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="Atags">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="Atags">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="Atags">LEGAL</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-left flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="Atags">Shop by Catrgories</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" id="Atags">Orders</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" id="Atags">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" id="Atags">CONTACT US</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" id="Atags">LEGAL</a>
-                  </li>
-                </ul>
+              <!-- myntra logo -->
+              <a class="navbar-brand" href="#">
+                <img src="myntraLogo.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+              </a>
+              <!-- buttons on the navbar -->
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#search" id="Atags" onclick="searching()"><input type="text" id="searchInput"><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#notifications" id="Atags"><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"/></svg></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#wishlist" id="wishLogo" onclick="openWish()"><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#cart" id="cartLogo" onclick="openCart()"><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 96c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24zm200-24c0 13.3-10.7 24-24 24s-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24z"/></svg></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <p id="para-invissible">this goes under the nav bar</p>
+          <p id="para-invissible">this goes under the nav bar</p>
+          <!-- <span id="para-invissible1"></span> -->
+        </td>
+      </tr>
+      <!-- stating line wise images for different styles  -->
+      <tr id="tr11">
+        <td><img src="men.jpeg" alt=".." class="img11" id="11" onclick="run11()"><strong id="imgBrand11">MEN</strong></td>
+        <td><img src="womem.jpg" alt=".." class="img11" id="11">Women</td>
+        <td><img src="virat.jpg" alt=".." class="img11" id="11">WinterWear</td>
+        <td><img src="kids.jpg" alt=".." class="img11" id="11">kids</td>
+        <td><img src="beauty.jpg" alt=".." class="img11" id="11">Beauty</td>
+        <td><img src="women2.webp" alt=".." class="img11" id="11">Sports</td>
+        <td><img src="footwear.jpg" alt=".." class="img11" id="11">Footwear</td>
+        <td><img src="backbags.jpg" alt=".." class="img11" id="11">Bags</td>
+        <td><img src="womem.jpg" alt=".." class="img11" id="11">Fragrense</td>
+        <td><img src="virat.jpg" alt=".." class="img11" id="11">Belts</td>
+        <td><img src="men2.webp" alt=".." class="img11" id="11">Frames</td>
+        <td><img src="chains.jpg" alt=".." class="img11" id="11">Accesssories</td>
+        <td><img src="virat.jpg" alt=".." class="img11" id="11">Jewellery</td>
+        <td><img src="virat.jpg" alt=".." class="img11" id="11"><strong>Stylecast</strong></td>
+        <td><img src="virat.jpg" alt=".." class="img11" id="11">Luxury</td>
+        <td><img src="virat.jpg" alt=".." class="img11" id="11">Gifting</td>
+      </tr>
+      <tr id="tr21">
+        <!-- carasols  -->
+        <td>
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="myntra1.jpg" class="d-block w-100" style="height:400px;" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="myntra2.jpg" class="d-block w-100" style="height:400px;" alt="...">
+              </div>
+              <div class="carousel-item">
+                <video controls autoplay style="height:400px; width: 100%;" >
+                  <source src="video.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="carousel-item">
+                <img src="myntra3.jpg" class="d-block w-100" style="height:400px;" alt="...">
               </div>
             </div>
-            <!-- myntra logo -->
-            <a class="navbar-brand" href="#">
-              <img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\myntraLogo.webp" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
-            </a>
-            <!-- buttons on the navbar -->
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#search" id="Atags">S</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#notifications" id="Atags">N</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#wishlist" id="wishLogo">W</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#cart" id="cartLogo" onclick="openCart()">C</a>
-              </li>
-            </ul>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"></button>
           </div>
-        </nav>
-        <p id="para-invissible">this goes under the nav bar</p>
-        <p id="para-invissible">this goes under the nav bar</p>
-      </td>
-    </tr>
-    <!-- stating line wise images for different styles  -->
-    <tr id="tr11" class=" col-xs-2 col-sm-3 col-md-6 col-lg-12">
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\men.jpeg" alt=".." class="img11" id="11" onclick="run11()"><strong id="imgname11">MEN</strong></td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womem.jpg" alt=".." class="img11" id="11">Women</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">WinterWear</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\kids.jpg" alt=".." class="img11" id="11">kids</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\beauty.jpg" alt=".." class="img11" id="11">Beauty</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\women2.webp" alt=".." class="img11" id="11">Sports</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\footwear.jpg" alt=".." class="img11" id="11">Footwear</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\backbags.jpg" alt=".." class="img11" id="11">Bags</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womem.jpg" alt=".." class="img11" id="11">Fragrense</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Belts</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\men2.webp" alt=".." class="img11" id="11">Frames</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\chains.jpg" alt=".." class="img11" id="11">Accesssories</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Jewellery</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11"><strong>Stylecast</strong></td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Luxury</td>
-      <td><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt=".." class="img11" id="11">Gifting</td>
-    </tr>
-    <tr id="tr21" >
-      <!-- carasols  -->
-      <td>
-        <div id="carouselExampleCaptions" class="carousel slide w-100 col-xs-2 col-sm-3 col-md-6 col-lg-12" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\myntra1.jpg" class="d-block w-100" style="height:400px;" alt="...">
+        </td>
+      </tr>
+      <tr id="tr31">
+        <!-- discount cupouns -->
+        <td><img src="myntra-credit-card1.webp" alt=".." id="img31">
+        <img src="myntra-credit-card2.webp" alt=".." id="img31"></td>
+      </tr>
+      <tr><td><h4>MEN</h4></td></tr>
+      <tr id="tr41">
+        <!-- another scrolling divs -->
+        <td>
+          <a id="a111" class="Atags" onclick="run111()">
+            <div class="card">
+              <img class="card-img-top" src="menshirt.jpg" alt="Card image cap" id="111">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand111">FOREVER21</h5>
+                <small class="text-muted" id="imgType111">Formal Shirts</small>
+                <p id="price111">790</p>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\myntra2.jpg" class="d-block w-100" style="height:400px;" alt="...">
+          </a>
+        </td>
+        <td>
+          <a id="a112" class="Atags" onclick="run112()">
+            <div class="card">
+              <img class="card-img-top" src="mensweatshirts.jpg" alt="Card image cap" id="112">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand112">FREESOUL</h5>
+                <small class="text-muted" id="imgType112">Sweatshirts</small>
+                <p id="price112">1499</p>
+              </div>
             </div>
-            <div class="carousel-item">
-              <video controls autoplay style="height:400px; width: 100%;" >
-                <source src="C:\Users\Doddi Naveen\Pictures\myntraimgs\video.mp4" type="video/mp4">
-              </video>
+          </a>
+        </td>
+        <td>
+          <a id="a113" class="Atags" onclick="run113()">
+            <div class="card">
+              <img class="card-img-top" src="mencargos.webp" alt="Card image cap" id="113">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand113">Wrong</h5>
+                <small class="text-muted" id="imgType113">Cargos</small>
+                <p id="price113">1799</p>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\myntra3.jpg" class="d-block w-100" style="height:400px;" alt="...">
+          </a>
+        </td>
+        <td>
+          <a id="a114" class="Atags" onclick="run114()">
+            <div class="card">
+              <img class="card-img-top" src="men2.webp" alt="Card image cap" id="114">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand114">M & H</h5>
+                <small class="text-muted" id="imgType114">Shirts</small>
+                <p id="price114">999</p>
+              </div>
             </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"></button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"></button>
-        </div>
-      </td>
-    </tr>
-    <tr id="tr31">
-      <!-- discount cupouns -->
-      <td class="col-xs-2 col-sm-2 col-md-2 col-lg-12"><img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\myntra-credit-card1.webp" alt=".." id="img31">
-      <img src="C:\Users\Doddi Naveen\Pictures\myntraimgs\myntra-credit-card2.webp" alt=".." id="img31"></td>
-    </tr>
-    <tr><td><h4>MEN</h4></td></tr>
-    <tr id="tr41" class="col-xs-2 col-sm-3 col-md-6 col-lg-12">
-      <!-- another scrolling divs -->
-      <td>
-        <a id="a111" class="Atags" onclick="run111()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\menshirt.jpg" alt="Card image cap" id="111">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname111">FOREVER21</h5>
-              <small class="text-muted">Formal Shirts</small>
-              <p id="price111">790</p>
+          </a>
+        </td>
+        <td>
+          <a id="a115" class="Atags" onclick="run115()">
+            <div class="card">
+              <img class="card-img-top" src="virat.jpg" alt="Card image cap" id="115">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand115">FOREVER21</h5>
+                <small class="text-muted" id="imgType1115">Sweaters</small>
+                <p id="price115">1299</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a112" class="Atags" onclick="run112()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\mensweatshirts.jpg" alt="Card image cap" id="112">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname112">FREESOUL</h5>
-              <small class="text-muted">Sweatshirts</small>
-              <p id="price112">1499</p>
+          </a>
+        </td>
+        <td>
+          <a id="a116" class="Atags" onclick="run116()">
+            <div class="card">
+              <img class="card-img-top" src="caps.jpg" alt="Card image cap" id="116">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand116">ROADSTER</h5>
+                <small class="text-muted" id="imgType116">Caps</small>
+                <p id="price116">799</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a113" class="Atags" onclick="run113()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\mencargos.webp" alt="Card image cap" id="113">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname113">Wrong</h5>
-              <small class="text-muted">Cargos</small>
-              <p id="price113">1799</p>
+          </a>
+        </td>
+        <td>
+          <a id="a117" class="Atags" onclick="run117()">
+            <div class="card">
+              <img class="card-img-top" src="men.jpeg" alt="Card image cap" id="117">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand117">H&M</h5>
+                <small class="text-muted" id="imgType117">Casual Sirts</small>
+                <p id="price117">1350</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a114" class="Atags" onclick="run114()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\men2.webp" alt="Card image cap" id="114">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname114">M & H</h5>
-              <small class="text-muted">Shirts</small>
-              <p id="price114">999</p>
+          </a>
+        </td>
+        <td>
+          <a id="a118" class="Atags" onclick="run118()">
+            <div class="card">
+              <img class="card-img-top" src="menpants.webp" alt="Card image cap" id="118">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand118">ROBO</h5>
+                <small class="text-muted" id="imgType118">Pants</small>
+                <p id="price118">1100</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a115" class="Atags" onclick="run115()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\virat.jpg" alt="Card image cap" id="115">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname115">FOREVER21</h5>
-              <small class="text-muted">Sweaters</small>
-              <p id="price115">1299</p>
+          </a>
+        </td>
+        <td>
+          <a id="a119" class="Atags" onclick="run119()">
+            <div class="card">
+              <img class="card-img-top" src="footwear.jpg" alt="Card image cap" id="119">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand119">ADDIDAS</h5>
+                <small class="text-muted" id="imgType119">Sneakers</small>
+                <p id="price119">2500</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a116" class="Atags" onclick="run116()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\caps.jpg" alt="Card image cap" id="116">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname116">ROADSTER</h5>
-              <small class="text-muted">Caps</small>
-              <p id="price116">799</p>
+          </a>
+        </td>
+        <td>
+          <a id="a120" class="Atags" onclick="run120()">
+            <div class="card">
+              <img class="card-img-top" src="chains.jpg" alt="Card image cap" id="120">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand120">H & M</h5>
+                <small class="text-muted" id="imgType120">Chains</small>
+                <p id="price120">3500</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a117" class="Atags" onclick="run117()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\men.jpeg" alt="Card image cap" id="117">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname117">H&M</h5>
-              <small class="text-muted">Casual Sirts</small>
-              <p id="price117">1350</p>
+          </a>
+        </td>
+      </tr>
+      <tr><td><h4>WOMEN</h4></td></tr>
+      <tr id="tr51">
+        <!-- another scrolling divs -->
+        <td>
+          <a id="a211" class="Atags" onclick="run211()">
+            <div class="card">
+              <img class="card-img-top" src="womem.jpg" alt="Card image cap" id="211">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand211">ROADSTER</h5>
+                <small class="text-muted" id="imgType211">dress</small>
+                <p id="price211">990</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a118" class="Atags" onclick="run118()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\menpants.webp" alt="Card image cap" id="118">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname118">ROBO</h5>
-              <small class="text-muted">Pants</small>
-              <p id="price118">1100</p>
+          </a>
+        </td>
+        <td>
+          <a id="a212" class="Atags" onclick="run212()">
+            <div class="card">
+              <img class="card-img-top" src="womensarees.webp" alt="Card image cap" id="212">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand212">KUKUNDH</h5>
+                <small class="text-muted" id="imgType212">Sarees</small>
+                <p id="price212">2599</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a119" class="Atags" onclick="run119()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\footwear.jpg" alt="Card image cap" id="119">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname119">ADDIDAS</h5>
-              <small class="text-muted">Sneakers</small>
-              <p id="price119">2500</p>
+          </a>
+        </td>
+        <td>
+          <a id="a213" class="Atags" onclick="run213()">
+            <div class="card">
+              <img class="card-img-top" src="womenjeans.jpg" alt="Card image cap" id="213">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand213">HRX</h5>
+                <small class="text-muted" id="imgType213">Jeans</small>
+                <p id="price213">999</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a120" class="Atags" onclick="run120()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\chains.jpg" alt="Card image cap" id="120">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname120">H & M</h5>
-              <small class="text-muted">Chains</small>
-              <p id="price120">3500</p>
+          </a>
+        </td>
+        <td>
+          <a id="a214" class="Atags" onclick="run214()">
+            <div class="card">
+              <img class="card-img-top" src="womendress.webp" alt="Card image cap" id="214">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand214">M & H</h5>
+                <small class="text-muted" id="imgType214">Dress</small>
+                <p id="price214">1231</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-    </tr>
-    <tr><td><h4>WOMEN</h4></td></tr>
-    <tr id="tr51" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <!-- another scrolling divs -->
-      <td>
-        <a id="a211" class="Atags" onclick="run211()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womem.jpg" alt="Card image cap" id="211">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname211">ROADSTER</h5>
-              <small class="text-muted">dress</small>
-              <p id="price211">990</p>
+          </a>
+        </td>
+        <td>
+          <a id="a215" class="Atags" onclick="run215()">
+            <div class="card">
+              <img class="card-img-top" src="womenkurthas.jpg" alt="Card image cap" id="215">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand215">HIGHLANDER</h5>
+                <small class="text-muted" id="imgType215">kurthas</small>
+                <p id="price215">999</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a212" class="Atags" onclick="run212()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womensarees.webp" alt="Card image cap" id="212">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname212">KUKUNDH</h5>
-              <small class="text-muted">Sarees</small>
-              <p id="price212">2599</p>
+          </a>
+        </td>
+        <td>
+          <a id="a216" class="Atags" onclick="run216()">
+            <div class="card">
+              <img class="card-img-top" src="womentop.jpg" alt="Card image cap" id="216">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand216">ROADSTER</h5>
+                <small class="text-muted" id="imgType216">Tops</small>
+                <p id="price216">799</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a213" class="Atags" onclick="run213()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womenjeans.jpg" alt="Card image cap" id="213">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname213">HRX</h5>
-              <small class="text-muted">Jeans</small>
-              <p id="price213">999</p>
+          </a>
+        </td>
+        <td>
+          <a id="a217" class="Atags" onclick="run217()">
+            <div class="card">
+              <img class="card-img-top" src="jewellery.jpg" alt="Card image cap" id="217">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand217">MALABAR</h5>
+                <small class="text-muted" id="imgType217">Jewellery</small>
+                <p id="price217">550000</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a214" class="Atags" onclick="run214()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womendress.webp" alt="Card image cap" id="214">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname214">M & H</h5>
-              <small class="text-muted">Dress</small>
-              <p id="price214">1231</p>
+          </a>
+        </td>
+        <td>
+          <a id="a218" class="Atags" onclick="run218()">
+            <div class="card">
+              <img class="card-img-top" src="beauty.jpg" alt="Card image cap" id="218">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand218">NIKE</h5>
+                <small class="text-muted" id="imgType218">Beatuy</small>
+                <p id="price218">5000</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a215" class="Atags" onclick="run215()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womenkurthas.jpg" alt="Card image cap" id="215">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname215">HIGHLANDER</h5>
-              <small class="text-muted">kurthas</small>
-              <p id="price215">999</p>
+          </a>
+        </td>
+        <td>
+          <a id="a219" class="Atags" onclick="run219()">
+            <div class="card">
+              <img class="card-img-top" src="women2.webp" alt="Card image cap" id="219">
+              <div class="card-body">
+                <h5 class="card-title" id="imgBrand219">PUMA</h5>
+                <small class="text-muted" id="imgType219">Blazzer</small>
+                <p id="price218">3000</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a216" class="Atags" onclick="run216()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\womentop.jpg" alt="Card image cap" id="216">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname216">ROADSTER</h5>
-              <small class="text-muted">Tops</small>
-              <p id="price216">799</p>
-            </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a217" class="Atags" onclick="run217()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\jewellery.jpg" alt="Card image cap" id="217">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname217">MALABAR</h5>
-              <small class="text-muted">Jewellery</small>
-              <p id="price217">550000</p>
-            </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a218" class="Atags" onclick="run218()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\beauty.jpg" alt="Card image cap" id="218">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname218">NIKE</h5>
-              <small class="text-muted">Beatuy</small>
-              <p id="price218">5000</p>
-            </div>
-          </div>
-        </a>
-      </td>
-      <td>
-        <a id="a219" class="Atags" onclick="run219()">
-          <div class="card">
-            <img class="card-img-top" src="C:\Users\Doddi Naveen\Pictures\myntraimgs\women2.webp" alt="Card image cap" id="219">
-            <div class="card-body">
-              <h5 class="card-title" id="imgname219">PUMA</h5>
-              <small class="text-muted">Blazzer</small>
-              <p id="price218">3000</p>
-            </div>
-          </div>
-        </a>
-      </td>
-    </tr>
-    <tfoot>
-      <td >
-        <div id="end">View More Products</div>
-      </td>
-    </tfoot>
-  </table>
+          </a>
+        </td>
+      </tr>
+
+      <tfoot>
+        <tr>
+          <td id="end" style="text-align: center;">View More Products</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
   <!-- div for to see the image -->
   <div id="imgviewer">
-      <button type="button" onclick="closeimg()">&times;</button>
-      <h4 id="imgname">...</h4>
+      <button type="button" onclick="closeimg()">X</button>
+      <h4 id="imgBrand">...</h4>
       <img src=" " alt="image" id="imagepic" style="height: 400px; width: 300px;">
       <p id="price">0</p>
-      <div calss="btn-group" id="imgviewerbtns">
+      <div calss="btn-group" >
         <!-- <button type="button" class="btn btn-default" >WHISHLIST</button> -->
-        <button id="wishlistbtn" class="btn bi bi-heart" style="border-radius: 30px; background:rgb(143, 173, 199);" onclick="wishlist()">&#9825 wishlist</button>
+        <button id="wishlistbtn" class="btn bi bi-heart" style="border-radius: 30px; background:rgb(143, 173, 199);" onclick="addWish0()">&#9825 wishlist</button>
         <button type="button" class="btn btn-default" onclick="addCart0()">ADD TO CART</button>
+        <div id="imgviewerwishbtns" style="visibility: hidden;">
+          <span>select your SIZE </span>
+          <button onclick="wishlist()">S</button>
+          <button onclick="wishlist()">M</button>
+          <button onclick="wishlist()">L</button>
+          <button onclick="wishlist()">XL</button>
+        </div>
+        <div id="imgviewercartbtns" style="visibility: hidden;">
+          <span>select your SIZE </span>
+          <button onclick="addCart()">S</button>
+          <button onclick="addCart()">M</button>
+          <button onclick="addCart()">L</button>
+          <button onclick="addCart()">XL</button>
+        </div>
+        <!-- <p id="imgviewerbtns"></p> -->
       </div>
   </div>
+  <!-- div to see the wishlist items -->
+  <div id="wishDiv">
+    <table class="table">
+      <thead>
+        <td><center><h4 style="color: red;">WISHLIST</h4></center></td>
+        <td style="text-align: right;">
+          <!-- <button type="button" onclick="delCart()">DelwISH</button> -->
+          <button type="button" onclick="closeimg()">&#10008;</button>
+        </td>
+      </thead>
+      <tbody id="wishTableBody">
+        <td id="wishIsEmpty"><h2>ADD ITEMS TO WISHLIST</h2></td>
+        <td></td>
+      </tbody>
+      <tfoot>
+        <td>
+          <button onclick="addCart()" id="wishDivbtns">move to CART</button>
+        </td>
+      </tfoot>
+    </table>
+
+  </div>
   <!-- div to add the items to CART -->
-  <div id="cartDiv" >
+  <div id="cartDiv">
     
-    <table  class="table">
+    <table class="table">
       <thead>
         <td><center><h4 style="color: red;">CART</h4></center></td>
         <td style="text-align: right;">
-          <button type="button" onclick="delCart()">DelCart</button>
-          <button type="button" onclick="closeimg()">&times</button>
+          <!-- <button type="button" onclick="delCart()">DelCart</button> -->
+          <button type="button" onclick="closeimg()">&#10008;</button>
         </td>
       </thead>
-      <tbody id="cartTableBody">
-        <td id="cartIsEmpty"><h2>Cart is EMPTY</h2></td>
-        <td></td>
+      <tbody>
+        <tr>
+          <td id="cartIsEmpty"><h2>Cart is EMPTY</h2></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td id="cartTableBody" colspan="2"></td>
+        </tr>
+        
       </tbody>
       <tfoot id="cartTableFoot">
         <tr>
-          <td style="text-align: right;"><p>Total MRP :</p></td>
+          <td style="text-align: right;"><p>Total MRP &#8377 :</p></td>
           <td id="totalMRP" style="text-align: right">0</td>
         </tr>
         <tr>
-          <td style="text-align: right;">Discount on MRP(10%) : </td>
+          <td style="text-align: right;">Discount on MRP(10%) &#8377 : </td>
           <td id="discount" style="text-align: right; color:green;">-200</td>
         </tr>
         <tr>
-          <td style="text-align: right;">Coupon Discount :</td>
+          <td style="text-align: right;">Coupon Discount &#8377 :</td>
           <td style="text-align: right; color: red">apply coupon</td>
         </tr>
         <tr>
@@ -411,12 +459,21 @@
           <td style="text-align: right; color: green">FREE</td>
         </tr>
         <tr>
-          <td style="text-align: right;"><p>Total amount :</p></td>
+          <td style="text-align: right;"><p>Total amount &#8377 :</p></td>
           <td id="totalAmount" style="text-align: right">0</td>
         </tr>
-      </tfoot>
-    </table>
+        <tr>
+          <td style="text-align: right;" colspan="2">
+            <button class="btn-success" onclick="placeOrder()">PLACE ORDER</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" id="placingOrder" style="color: green;"></td>
+        </tr>
+        </tfoot>
+      </table>
+      <span id="para-invissible1"></span>
 
-  </div>
+    </div>
 </body>
 </html>
