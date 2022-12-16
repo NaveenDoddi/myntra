@@ -122,7 +122,8 @@ function addCart(){
     var source = document.getElementById("imagepic").src
     var image = document.createElement("img")
     image.src = source
-    image.style.width="300px"
+    image.style.width="200px"
+    image.style.height="300px"
 
     var col1 = document.createElement("td")
     col1.append(image)
@@ -204,7 +205,8 @@ function wishlist(){
     var source = document.getElementById("imagepic").src
     var image = document.createElement("img")
     image.src = source
-    image.style.width="300px"
+    image.style.width="200px"
+    image.style.height="300px"
 
     var col1 = document.createElement("td")
     col1.append(image)
@@ -247,6 +249,24 @@ function wishlist(){
 }
 function forresolution(){
     var bodywidth = document.getElementsByClassName("table-responsive")[0].offsetWidth
+    // var bodyheight = document.getElementsByClassName("table-responsive")[0].offsetHeight
+    
+    if(bodywidth>350 && bodywidth<420){
+        document.getElementById("para-invissible").style.height = "150px"
+        document.getElementById("imgviewer").style.left = "40px"
+        // document.getElementById("imgviewer").style.left = "80px"
+        // document.getElementById("imgviewer").style.height = "150px"
+        // document.getElementById("cartDIv").style.height = "150px"
+        // document.getElementById("wishDiv").style.height = "150px"
+        
+    }
+    if(bodywidth>420 && bodywidth<545){
+        document.getElementById("para-invissible").style.height = "100px"
+        document.getElementById("imgviewer").style.left = "90px"
+    }
+    if(bodywidth>545){
+        document.getElementById("para-invissible").style.height = "50px"
+    }
 
     document.getElementById("tr11").style.width=bodywidth+"px"
     document.getElementById("tr21").style.width=bodywidth+"px"
@@ -255,9 +275,7 @@ function forresolution(){
     document.getElementById("tr51").style.width=bodywidth+"px"
 
     document.getElementById("imgviewer").style.top = "130px"
-    if(bodywidth < 576){
-        document.getElementById("imgviewer").style.left = "120px"
-    }
+    
     if(bodywidth >= 576){
         document.getElementById("imgviewer").style.left = "170px"
     }
@@ -280,8 +298,7 @@ function forresolution(){
 function searching(){
    
     
-    // var input = document.getElementById("searchInput").value
-    var input = "caps"
+    var input = document.getElementById("searchInput").value
     input = input.toUpperCase()
 
     var array = document.getElementsByTagName("small")
@@ -291,7 +308,6 @@ function searching(){
             table.id = "searchDiv"
 
             var searchId = array[i].id
-            console.log(searchId)
             var id = searchId.slice(-3)
             var brandName = document.getElementById("imgBrand"+id).innerHTML
             var head = document.createElement("thead")
@@ -340,7 +356,9 @@ function searching(){
         }
     }
     
+    var body = document.body,
+    html = document.documentElement;
 
-
+    var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+    console.log(height)
 }
-    
