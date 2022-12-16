@@ -58,11 +58,11 @@ td{
     visibility: hidden;
     position: fixed;
     background-color: rgb(143, 173, 199);
-    width: 320px;
+    /* width: 300px; */
 }
 #wishDiv{
     height: 800px;
-    width: 500px;
+    /* width: 400px; */
     border: 10px solid blanchedalmond;
     visibility: hidden;
     position: fixed;
@@ -72,7 +72,7 @@ td{
 }
 #cartDiv{
     height: 800px;
-    width: 500px;
+
     border: 10px solid blanchedalmond;
     visibility: hidden;
     position: fixed;
@@ -81,7 +81,7 @@ td{
     overflow: scroll;
 }
 #subDivCart{
-    height: 400px;
+    /* height: 400px; */
     border: 2px solid rgb(218, 212, 149);
 }
 .card-img-top{
